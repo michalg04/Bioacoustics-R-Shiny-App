@@ -14,6 +14,7 @@ The link to the app can be found through this link:  https://rstudio.csm.calpoly
 The username and password can be provided upon request.
 
 If you wish to run this app from your own machine you may clone this repository: https://github.com/michalg04/Bioacoustics-R-Shiny-App/
+
 This is where the app gets updates, so make sure to periodically check there.
 
 Once this app is on your local machine, you may download the most recent version of R-studio and open the server.R file and hit run.
