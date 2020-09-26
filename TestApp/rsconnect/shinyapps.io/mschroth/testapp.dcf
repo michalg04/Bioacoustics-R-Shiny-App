@@ -1,0 +1,10 @@
+name: testapp
+title:
+username:
+account: mschroth
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 395684
+bundleId: 1718445
+url: https://mschroth.shinyapps.io/testapp/
+when: 1543097122.55411

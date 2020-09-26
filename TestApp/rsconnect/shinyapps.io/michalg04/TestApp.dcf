@@ -1,0 +1,12 @@
+name: TestApp
+title: TestApp
+username:
+account: michalg04
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1012240
+bundleId: 3285372
+url: https://michalg04.shinyapps.io/TestApp/
+when: 1592445436.18215
+asMultiple: FALSE
+asStatic: FALSE

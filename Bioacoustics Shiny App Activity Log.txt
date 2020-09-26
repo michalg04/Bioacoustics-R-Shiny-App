@@ -1,0 +1,110 @@
+
+
+Bioacoustics Shiny App Activity Log
+Michal Golovanevsky 
+
+Week 1:
+	-Researched bioacoustics
+		-What is a spectrogram?
+		-What is an oscillogram?
+		-What is a spectrum?
+	-Watched the 7 video tutorial series on the Raven website and followed along using their 
+	demo files 
+	-Uploaded the .wav files in the repository into RavenLite and replicated the process shown 
+	in the videos 
+	-Compared some of the RavenLite results to our Shiny App and played around with 
+	different files
+	-Read through the R code and worked on understanding majority of the code
+	-Researched bugs in the Shiny App and tried to ÒbreakÓ the App
+		-New bugs observed: 
+			-After uploading a file need if you click on one of the preloaded options 
+			nothing happens, need to reset to change the file. 
+	-Worked on fixing stylistic problems with the app
+		-Made images in the help options align with text and adjust based on screen size
+		-Researched font size/style problem
+Week 2:
+	- Began Researching audio playback
+		- Got a working version of the app's playback on Google Chrome
+		- Fixed font differences in the app
+		- Published shinyapp to my own account
+			-audio works everywhere but Safari browser
+		- Researched how to get the wav files to play on RStudio webpage, potential solutions:
+			-convert wav to mp3
+			-if can't convert using R code, run a shell script to convert
+			-use beepr() package
+		
+Week 3:
+	- Worked on Audio Play starting and ending at a certain time
+		- now it displays the time the audio is set to and is also synced with the spectrogram
+		- it generates a new audio that is shorter rather than just move the curser so we can set an 
+		end date as well
+	- researched different segmentation or change detection methods
+	- added a new tab for segmentation
+		- using autodetec() from warbleR
+			- a bit on the slower side
+		- added Min/Max duration, amplitude threshold, and min/max frequency to the sidebar
+		- added help buttons to explain each item on the sidebar
+		- generates graph but doesn't always do a great job segmenting
+		- good example is dolphin file with min time = 0.2 seconds
+	- rounded numbers on slidebars 
+	- made 2 red lines thicker/bolder
+		- also added that to the spectrogram
+ 	- Made formula in text stand out more in overlapping help
+ 	- Changed "loosing" to "losing" in zero padding help
+
+Week 4:
+	- potentially fixed max db being 0
+		- unsure of the lower limit (using alim)
+		- need an example of when this happens
+	- researched horizontal black lines on spectrogram to also add to spectrum
+		- built-in feature for spectro, doesn't exist for spec, can make them artificially for both 
+		but doing it just for spectrum won't match the spectro. Look at difference between the sin files
+	- need more details for "Option to specify start time and duration instead of start time and end time"
+	- Condensed inputs on left
+		- made min/max pairs be on the same line
+	- researched why doesn't it show amplitude for all frequences in dolphin file
+		- potential solution would be to do a seperate if statement just for the dolphin files so there's no flim
+	- fixed: "Choosing a different window function should change both the spectrum and the spectrogram, but it currently 		doesn't change the spectrum"
+	- need more details: "Make pictures smaller and consistent across help options (use size of right graph in windowed 		signal as template)" 
+	- fixed: f_s in sampling rate should be an actual subscript
+	- Windows.R doesn't work when run by itself, why? 
+Week 5:
+	- worked on a few fixes with windows.R
+		- still need to make the legend, but everything else is done
+	- researched other spectrum methods
+		- none worked in the way we wanted them to
+	- new segmentation method using segment()
+		- help buttons
+		- downloadable datatable as csv
+		- adjustment menu:
+			- can adjust amplitude threshold and minimum duration of a segment
+			- a lot of other options to explore
+		- peaks/bursts data tables
+		- information button for the segmentation method
+Week 6:
+	- segmentation:
+		- removed bursts/peaks
+		- start time, end time, duration
+		- min and max frequency, peak frequency
+			-using spec() graph and dfreq() for dominant frequency - peak frequency
+		- investigated the range of amplitudes in the marine animals and why they appear to be in the -90 to -120 for 			  whales
+			- used histograms to do that, documented in the Descriptive Stats for Segments issue
+		- reproduced the spectrogram in the segmentation tab
+		- added boxes around spectrogram for each segment
+		- option to click on a segment in the data table and that will highlight a segment box in the spectrogram
+Week 7:
+	- segmentation:
+		- added help buttons
+		- fixed typos
+		- improved the location of the graphs and their size
+	- fixed windows help spectrum axis to only go to 0.4999
+	- researched legend for 7th graph for windows.R
+	- researched problems with noise file
+		- works when run seperately outside the app
+	- fixed noise file
+		-removed NA value when picking min frequency
+	- fixed dolphin spectrum
+		- NAs were created in the sample rate, needed to round numbers
+	
+
+

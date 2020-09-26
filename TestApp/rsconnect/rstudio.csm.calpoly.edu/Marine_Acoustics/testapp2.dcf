@@ -1,0 +1,12 @@
+name: testapp2
+title: TestApp
+username: Marine_Acoustics
+account: Marine_Acoustics
+server: rstudio.csm.calpoly.edu
+hostUrl: https://rstudio.csm.calpoly.edu/__api__
+appId: 145
+bundleId: 307
+url: https://rstudio.csm.calpoly.edu/content/145/
+when: 1593064268.27852
+asMultiple: FALSE
+asStatic: FALSE
